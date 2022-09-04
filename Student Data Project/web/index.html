@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--JS-->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header text-center bg-success">
+                            <h3 class="text-white">Student Data</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="UserServlet" method="post" enctype="multipart/form-data">
+                                <table>
+                                    <!--name data row-->
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" name="name" placeholder="Name :" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="file" name="stdPic" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">upload picture</div>
+                                    </div>
+                                    <!--fathername row-->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" name="fatherName" placeholder="Father's name :" required=""  class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--surname row-->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" name="surName" placeholder="Surname :" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--date of birth row-->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" name="birthDate" placeholder="Date of birth:" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="file" name="birthCertificate" required class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">upload birth certificate</div>
+                                    </div>
+                                    <!--place of birth row-->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" name="birthPlace" placeholder="Place of birth :" required=""  class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Address-->
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="form-group">
+                                                <input type="text" name="address" required="" placeholder="Address:" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--cnic data row-->
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" name="cnicNo" required="" placeholder="cnic" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="file" name="cnicCopy" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">upload cnic copy</div>
+                                    </div>
+
+                                    <!--Qualification heading row-->
+                                    <div class="row">
+                                        <div class="col-md-4"><h4>Qualification :</h4></div>
+                                    </div>
+                                    <!-- matric qualification data row-->
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            Matric :
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="matricYear" required="" placeholder="year" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="matricSeatNo" required="" placeholder="seatNo" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="matricGrade" required="" placeholder="grade" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="matricBoard" required="" placeholder="board/uni" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="file" name="matricDoc" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Intermediate qualification data row-->
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            Intermediate :
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="interYear" required="" placeholder="year" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="interSeatNo" required="" placeholder="seatNo" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="interGrade" required="" placeholder="grade" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="interBoard" required="" placeholder="board/uni" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="file" name="interDoc" required=""class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Graduate qualification data row-->
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            Graduate :
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="graduatecYear" required="" placeholder="year" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="graduateSeatNo" required="" placeholder="seatNo" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="graduateGrade" required="" placeholder="grade" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="text" name="graduateUni" required="" placeholder="board/uni" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <input type="file" name="graduateDoc" required="" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </table>
+
+                                <button type="submit" class="btn btn-success">Submit</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--JAVA SCRIPT-->
+        <script>
+
+        </script>
+    </body>
+</html>
